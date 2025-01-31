@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Me Store</title>
+</head>
+<body>
+    <div class="main">
+        <div id="top-bar" class="top-banner text-light flex justify-center py-2">
+            <div class="h-[100%] w-[80%] flex justify-between items-center">
+                <p class="m-0 lg:text-[1.5vw] text-[3vw]">Free International Shipping with $75 Purchase</p>
+                 <img onclick="OfferClose()" class="cross" src="./images/cross.png" alt="">
+            </div>
+        </div>
+
+        <div class="landing-page lg:h-[150vh] pb-3">
+            <div class="top-navigation-bar flex justify-center">
+                <div class="h-[100%] w-[80%]">
+                    <div class="h-[50%] border-b-2 pt-4 border-black lg:flex justify-between items-center hidden">
+                        <div class="flex gap-5">
+                            <p class="m-0">Hello guys! Welcome to MeShop</p>
+                            <p class="m-0">Email: <span class="font-extrabold">free@psdfreebies.com</span></p>
+                        </div>
+                        <div class="flex gap-5">
+                            <span class="font-extrabold">EN</span>
+                            <span class="font-extrabold">USD</span>
+                        </div>
+                    </div>
+                    <!-- Desktop -->
+                    <div class="h-[50%] flex justify-between items-center">
+                        <div class="logo">
+                            <h3 class="logo-text">MeStore</h3>
+                        </div>
+                        <button id="menu-toggle" class="lg:hidden font-bold">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="hidden lg:flex gap-4 w-[60%]">
+                            <a href="#" class="font-bold">Home</a>
+                            <a href="#" class="font-bold">Shop</a>
+                            <a href="#" class="font-bold">Product</a>
+                            <a href="#" class="font-bold">Blog</a>
+                            <a href="#" class="font-bold">Portfolio</a>
+                            <a href="#" class="font-bold">Page</a>
+                            <a href="#" class="font-bold"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="font-bold"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="font-bold"><i class="fa-solid fa-list"></i></a>
+                        </div>                    
+                    </div>
+                    <!-- Mobile Navigation (Initially Hidden) -->
+                    <div id="mobile-nav" class="h-[100vh] w-[100%] bg-gray-400 fixed top-0 transition-transform duration-300">
+                        <div class="flex justify-between p-4 border-b-2 border-white">
+                            <div class="logo">
+                                <h3 class="text-[#fff] mob-logo">MeStore</h3>
+                            </div>
+                            <!-- Close Button -->
+                            <button id="close-menu" class="text-white font-bold">
+                                <i class="fa-solid fa-xmark text-white text-[10vw]"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Mobile Navigation Links -->
+                        <div class="p-4">
+                            <a href="#" class="text-white">Home</a>
+                            <a href="#" class="text-white">Shop</a>
+                            <a href="#" class="text-white">Product</a>
+                            <a href="#" class="text-white">Blog</a>
+                            <a href="#" class="text-white">Portfolio</a>
+                            <a href="#" class="text-white">Page</a>
+                            <a href="#" class="text-white"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="text-white"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="text-white"><i class="fa-solid fa-list"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex justify-center items-center w-[70%] h-[100%]">
+                <div class="page-content h-[50%] lg:w-[35vw] w-[50vw] mx-3 mt-5">
+                    <img src="./images/text.png" alt="">
+                    <p class="text-center mt-4 break-words lg:text-[1vw] text-[2vw]">
+                        Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there. This is Photoshop's version of Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.
+                    </p>
+                    <div class="flex justify-center">
+                        <button class="Shop_Now hidden lg:block text-light font-extrabold">Shop Now</button>
+                        <button class="lg:hidden text-light font-extrabold bg-[#f92357] rounded px-2">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:min-h-[135vh] w-[100%] flex justify-center">
+            <div class="product-section lg:absolute w-[80%] bg-white">
+                <div class="product-section-content p-5">
+                    <div class="spl-services lg:absolute -top-10 lg:flex justify-between w-[91%]">
+                        <div class="flex justify-center">
+                            <div>
+                                <div class="rounded-full mx-auto h-[90px] w-[90px] bg-gray-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-plane lg:text-[2.5vw] text-[10vw] -rotate-35"></i>
+                                </div>
+                                <h3 class="spl-h3">Free Shipping</h3>
+                                <p>With €50 or more orders</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div>
+                                <div class="rounded-full mx-auto h-[90px] w-[90px] bg-gray-100 flex items-center justify-center">
+                                    <i class="fa-regular fa-clock lg:text-[2.5vw] text-[10vw]"></i>
+                                </div>
+                                <h3 class="spl-h3">Free Refund</h3>
+                                <p>100% Refund Within 3 days</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div>
+                                <div class="rounded-full mx-auto h-[90px] w-[90px] bg-gray-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-phone lg:text-[2.5vw] text-[10vw]"></i>
+                                </div>
+                                <h3 class="spl-h3">Support 24.7</h3>
+                                <p>Call us anytime you want</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fashion-card w-[100%] lg:flex justify-between">
+                        <div class="product-banner-1 lg:w-[48%] mt-2 h-[100%]">
+                            <img src="./images/banners/1.png" alt="">
+                        </div>
+                        <div class="product-banner-2 lg:w-[48%] mt-2 h-[100%]">
+                            <img src="./images/banners/2.png" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="feature-product">
+                        <div class="text-center">
+                            <h3 class="spl-h3">FEATURED PRODUCTS</h3>
+                            <p>Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                        </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <img src="./images/products/1.png" class="w-full h-40 object-cover rounded-lg">
+                                        <h5 class="text-lg font-semibold mt-2">Orange T-shirt</h5>
+                                        <small>Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <img src="./images/products/2.png" class="w-full h-40 object-cover rounded-lg">
+                                        <h5 class="text-lg font-semibold mt-2">Orange T-shirt</h5>
+                                        <small>Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <img src="./images/products/3.png" class="w-full h-40 object-cover rounded-lg">
+                                        <h5 class="text-lg font-semibold mt-2">Orange T-shirt</h5>
+                                        <small>Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <img src="./images/products/4.png" class="w-full h-40 object-cover rounded-lg">
+                                        <h5 class="text-lg font-semibold mt-2">Orange T-shirt</h5>
+                                        <small>Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <img src="./images/products/1.png" class="w-full h-40 object-cover rounded-lg">
+                                        <h5 class="text-lg font-semibold mt-2">Orange T-shirt</h5>
+                                        <small>Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold">$69.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination (Bullets) -->
+                        <div class="swiper-pagination hidden lg:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="news-section lg:h-[140vh] w-[100%] flex justify-center">
+            <div class="h-[100%] w-[80%]">
+                <div class="text-center">
+                    <h3 class="spl-h3">Latest News</h3>
+                    <p>Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                </div>
+                <div class="card-section lg:flex justify-between">
+                    <div class="card lg:w-[25vw] mt-2 overflow-hidden">
+                        <img src="./images/news/1.png" alt="">
+                        <div class="new-detail p-3">
+                            <h6 class="news-h6">Porem ipsum dolor sit ame</h6>
+                            <p class="text-gray-200 m-0">Lorem Ipsum. Proin gravida nibh</p>
+                            <p class="lg:text-[1vw] text-[3vw]">Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.This is Photoshop's version of Lorem Ipsum.</p>
+                        </div>
+                        <div class="flex justify-between items-center px-3 pb-3">
+                            <button class="Shop_Now text-light font-extrabold rounded hidden lg:block">Read More</button>
+                            <button class="lg:hidden text-light font-extrabold bg-[#f92357] rounded px-2">Read More</button>
+                            <div class="like text-[#f92357] lg:text-[1.4vw]">
+                                <i class="fa-solid fa-heart"></i><span> |</span>
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card lg:w-[25vw] mt-2 overflow-hidden">
+                        <img src="./images/news/2.png" alt="">
+                        <div class="new-detail p-3">
+                            <h6 class="news-h6">Porem ipsum dolor sit ame</h6>
+                            <p class="text-gray-200 m-0">Lorem Ipsum. Proin gravida nibh</p>
+                            <p class="lg:text-[1vw] text-[3vw]">Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.This is Photoshop's version of Lorem Ipsum.</p>
+                        </div>
+                        <div class="flex justify-between items-center px-3 pb-3">
+                            <button class="Shop_Now text-light font-extrabold rounded hidden lg:block">Read More</button>
+                            <button class="lg:hidden text-light font-extrabold bg-[#f92357] rounded px-2">Read More</button>
+                            <div class="like text-[#f92357] lg:text-[1.4vw]">
+                                <i class="fa-solid fa-heart"></i><span> |</span>
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card lg:w-[25vw] mt-2 overflow-hidden">
+                        <img src="./images/news/3.png" alt="">
+                        <div class="new-detail p-3">
+                            <h6 class="news-h6">Porem ipsum dolor sit ame</h6>
+                            <p class="text-gray-200 m-0">Lorem Ipsum. Proin gravida nibh</p>
+                            <p class="lg:text-[1vw] text-[3vw]">Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.This is Photoshop's version of Lorem Ipsum.</p>
+                        </div>
+                        <div class="flex justify-between items-center px-3 pb-3">
+                            <button class="Shop_Now text-light font-extrabold rounded hidden lg:block">Read More</button>
+                            <button class="lg:hidden text-light font-extrabold bg-[#f92357] rounded px-2">Read More</button>
+                            <div class="like text-[#f92357] lg:text-[1.4vw]">
+                                <i class="fa-solid fa-heart"></i><span> |</span>
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w-[100%] lg:h-[115vh] flex justify-center">
+            <div class="w-[80%]">
+                <div class="lg:absolute bg-white">
+                    <div class="lg:absolute -top-28 bg-[white] w-[80vw] p-5">
+                        <div class="lg:flex justify-between">
+                            <div class="lg:w-[25vw] text-center">
+                                <h3 class="spl-h3 mb-5">Our Brands</h3>
+                                <div class="border-b flex">
+                                    <div>
+                                        <img src="./images/products/b1.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 border-b flex">
+                                    <div>
+                                        <img src="./images/products/b2.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 border-b flex">
+                                    <div>
+                                        <img src="./images/products/b3.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 flex">
+                                    <div>
+                                        <img src="./images/products/b4.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:w-[25vw] overflow-hidden">
+                                <img src="./images/banners/3.png" alt="">
+                            </div>
+                            <div class="w-[25vw] text-center hidden lg:block">
+                                <h3 class="spl-h3 mb-5">Our Brands</h3>
+                                <div class="border-b flex">
+                                    <div>
+                                        <img src="./images/products/b1.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 border-b flex">
+                                    <div>
+                                        <img src="./images/products/b2.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 border-b flex">
+                                    <div>
+                                        <img src="./images/products/b3.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 flex">
+                                    <div>
+                                        <img src="./images/products/b4.png" class="rounded-lg">
+                                    </div>
+                                    <div class="text-start px-3">
+                                        <h5 class="text-lg font-semibold">Orange T-shirt</h5>
+                                        <small class="">Nike</small>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-solid fa-star text-[goldenrod]"></i>
+                                            <i class="fa-regular fa-star text-[goldenrod]"></i>
+                                        </div>
+                                        <p class="text-gray-600"><s>$74.00</s> <span class="font-bold text-[#f92357]">$69.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[100%] border-t mt-4 pt-5">
+                            <div class="text-center">
+                                <h3 class="spl-h3">Never miss any fashion trending</h3>
+                                <p>Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <input type="text" class="w-[48%] rounded border">
+                                <button class="Shop_Now text-light font-extrabold mx-2 rounded hidden lg:block">Read More</button>
+                                <button class="lg:hidden text-light mx-2 font-extrabold bg-[#f92357] rounded">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[100%] lg:h-[50vh] -top-[50%] bg-gray-200 flex justify-center items-center gap-5 p-5">
+            <img src="./images/brands/1.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/2.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/3.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/4.png" class="w-[8vw]" alt="">
+            <!-- <img src="./images/brands/5.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/1.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/4.png" class="w-[8vw]" alt="">
+            <img src="./images/brands/2.png" class="w-[8vw]" alt=""> -->
+        </div>
+
+        <div class="footer h-[50vh] w-[100%] bg-[#f92357]">
+            <footer class="bg-gradient-to-r from-pink-500 to-red-500 py-5">
+                <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-6 text-white">
+                    
+                    <!-- About Company -->
+                    <div class="text-start">
+                        <h5 class="text-lg font-bold mb-3">About Company</h5>
+                        <p class="text-sm mb-4">This is a demo text for a company description. Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Main Road, Your City, NY 12345</p>
+                        <p><i class="fas fa-phone"></i> (002) 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> info@yourdomain.com</p>
+                    </div>
+            
+                    <!-- My Account -->
+                    <div class="text-start">
+                        <h5 class="text-lg font-bold mb-3">My Account</h5>
+                        <ul class="p-0">
+                            <li><a href="#" class="text-white">Login</a></li>
+                            <li><a href="#" class="text-white">Register</a></li>
+                            <li><a href="#" class="text-white">FAQ</a></li>
+                            <li><a href="#" class="text-white">Portfolio</a></li>
+                            <li><a href="#" class="text-white">Checkout</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Product -->
+                    <div class="text-start">
+                        <h5 class="text-lg font-bold mb-3">Product</h5>
+                        <ul class="p-0">
+                            <li><a href="#" class="text-white">About Us</a></li>
+                            <li><a href="#" class="text-white">Blog</a></li>
+                            <li><a href="#" class="text-white">Contact</a></li>
+                            <li><a href="#" class="text-white">Services</a></li>
+                            <li><a href="#" class="text-white">Portfolio</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Follow Us & Payment -->
+                    <div class="text-start">
+                        <h5 class="text-lg font-bold mb-3">Follow Us</h5>
+                        <div class="flex gap-2">
+                            <a href="#" class="text-xl"><i class="fab fa-facebook text-white"></i></a>
+                            <a href="#" class="text-xl"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="text-xl"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="text-xl"><i class="fab fa-youtube text-white"></i></a>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="text-lg font-bold mt-6 mb-3">Payment Methods</h5>
+                            <div class="flex gap-2">
+                                <i class="fab fa-cc-visa text-2xl"></i>
+                                <i class="fab fa-cc-mastercard text-2xl"></i>
+                                <i class="fab fa-cc-paypal text-2xl"></i>
+                                <i class="fab fa-cc-amex text-2xl"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="text-center text-sm mt-6 border-t border-white/20 pt-4 text-white">
+                    &copy; 2025 YourCompany. All Rights Reserved.
+                </div>
+            </footer>
+                     
+        </div>
+    </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+  
